@@ -3,228 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pawan Kumar | Portfolio</title>
+<title>Pawan Kumar | Data Analyst Portfolio</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
-  scroll-behavior:smooth;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+  scroll-behavior: smooth;
 }
 
-body{
-  background:#0f172a;
-  color:white;
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  text-align: center;
 }
 
-/* NAVBAR */
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 50px;
-  background:#020617;
-  position:sticky;
-  top:0;
-  z-index:100;
+header h1 {
+  font-size: 50px;
+  animation: fadeIn 2s ease-in-out;
 }
 
-nav h2{
-  color:#38bdf8;
+header p {
+  font-size: 20px;
+  opacity: 0.9;
 }
 
-nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:white;
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  text-align:center;
+h2 {
+  color: #38bdf8;
 }
 
-.hero h1{
-  font-size:3.5rem;
+.skills span {
+  background: #1e293b;
+  padding: 10px 15px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.hero span{
-  color:#38bdf8;
+.skills span:hover {
+  background: #38bdf8;
 }
 
-.typing{
-  margin-top:10px;
-  font-size:1.3rem;
-  color:#94a3b8;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
 }
 
-.btn{
-  margin-top:20px;
-  padding:12px 25px;
-  border:none;
-  background:#38bdf8;
-  color:black;
-  cursor:pointer;
-  border-radius:5px;
-  transition:0.3s;
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.4s;
 }
 
-.btn:hover{
-  background:white;
+.card:hover {
+  transform: translateY(-10px);
 }
 
-/* SECTION */
-.section{
-  padding:80px 50px;
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 20px;
 }
 
-.section h2{
-  text-align:center;
-  margin-bottom:40px;
-  color:#38bdf8;
+canvas {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 15px;
 }
 
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
 }
 
-.card{
-  background:#1e293b;
-  padding:20px;
-  border-radius:10px;
-  transition:0.3s;
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);} 
+  to {opacity: 1; transform: translateY(0);} 
 }
 
-.card:hover{
-  transform:translateY(-10px);
-}
-
-/* CONTACT */
-.contact{
-  text-align:center;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#020617;
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <h2>Pawan</h2>
-  <div>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+<header>
+  <h1>Pawan Kumar</h1>
+  <p>Data Analyst | Web Developer</p>
+</header>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Hi, I'm <span>Pawan Kumar</span> 👋</h1>
-  <div class="typing" id="typing"></div>
-  <button class="btn" onclick="scrollToSection()">View My Work</button>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
+<section>
   <h2>About Me</h2>
-  <p style="text-align:center; max-width:600px; margin:auto;">
-    I am a B.Tech CSE (AI/ML) student passionate about Data Analytics and Web Development.
-    I build real-world projects using Python, SQL, and modern technologies.
-  </p>
+  <p>I am a passionate Data Analyst skilled in Python, SQL, and visualization tools. I love turning data into insights.</p>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>SQL</span>
+    <span>Power BI</span>
+    <span>Excel</span>
+    <span>JavaScript</span>
+  </div>
+</section>
+
+<section>
   <h2>Projects</h2>
-
-  <div class="cards">
+  <div class="projects">
     <div class="card">
-      <h3>📊 Data Analysis</h3>
-      <p>Analyzed data using Python, Pandas, SQL.</p>
+      <h3>Sales Dashboard</h3>
+      <p>Analyzed sales trends using Python and Power BI.</p>
     </div>
-
     <div class="card">
-      <h3>🌐 Portfolio</h3>
-      <p>Responsive personal website.</p>
-    </div>
-
-    <div class="card">
-      <h3>🤖 AI Model</h3>
-      <p>Prediction model using ML.</p>
+      <h3>Customer Churn Analysis</h3>
+      <p>Predicted customer churn using ML models.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p>📧 yourmail@gmail.com</p>
-  <p>🔗 github.com/yourusername</p>
-  <p>💼 linkedin.com/in/yourprofile</p>
+<section>
+  <h2>Data Dashboard</h2>
+  <div class="dashboard">
+    <canvas id="chart1"></canvas>
+    <canvas id="chart2"></canvas>
+  </div>
 </section>
 
 <footer>
   <p>© 2026 Pawan Kumar</p>
 </footer>
 
-<!-- JS ANIMATION -->
 <script>
-const text = ["Data Analyst", "Web Developer", "AI/ML Enthusiast"];
-let i = 0;
-let j = 0;
-let currentText = "";
-let isDeleting = false;
-
-function type() {
-  currentText = text[i];
-
-  if (isDeleting) {
-    j--;
-  } else {
-    j++;
+new Chart(document.getElementById('chart1'), {
+  type: 'bar',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+    datasets: [{
+      label: 'Sales',
+      data: [12, 19, 8, 15]
+    }]
   }
+});
 
-  document.getElementById("typing").innerText = currentText.substring(0, j);
-
-  if (!isDeleting && j === currentText.length) {
-    isDeleting = true;
-    setTimeout(type, 1000);
-    return;
+new Chart(document.getElementById('chart2'), {
+  type: 'line',
+  data: {
+    labels: ['Week1', 'Week2', 'Week3', 'Week4'],
+    datasets: [{
+      label: 'Users',
+      data: [50, 80, 60, 100]
+    }]
   }
-
-  if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % text.length;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 100);
-}
-
-type();
-
-function scrollToSection() {
-  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-}
+});
 </script>
 
 </body>
